@@ -2,24 +2,25 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+class App extends Component {
+  //Set state
+
+  //Shuffle cards in browser when one is clicked
+}
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Navbar/>
+      <Header>
+        <Title>Clicky Game!</Title>
+        <Subtitle>Try not to click the same image twice!</Subtitle>
+      </Header>
+      <CharacterCards>
+        {/*   Images here   */}
+      </CharacterCards>
+      <Footer/>
+    </Wrapper>
   );
 }
 
