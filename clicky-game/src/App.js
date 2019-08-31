@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './App.css';
-import DBZ from "./dbz.json"
 // import Wrapper from "./components/Wrapper";
 // import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -8,6 +7,7 @@ import Header from "./components/Header";
 // import Subtitle from "./components/Subtitle";
 import CharacterCards from "./components/CharacterCards";
 // import Footer from "./components/Footer";
+import dbz from "./dbz.json";
 
 const shuffleArray = array => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -19,17 +19,18 @@ const shuffleArray = array => {
     array[i] = randomValue
 
   }
+  return array;
 }
 
 class App extends Component {
   //Set state
   state = {
+    dbz,
     clicks: [],
     clickCount: 0,
     wins: 0,
     losses: 0,
     highScore: 0,
-    DBZ
   };
 
   handleDivClick = (id) => {
@@ -56,13 +57,13 @@ class App extends Component {
         this.setState({ highScore: clickCount })
       }
 
-      if(clickCount % DBZ.length === 0){
+      if(clickCount % dbz.length === 0){
         this.setState({clicks:[], wins: this.state.wins + 1 })
       }
 
     }
 
-    this.setState({ DBZ: shuffleArray(DBZ) })
+    this.setState({ dbz: shuffleArray(dbz) })
 
   };
   render() {
@@ -72,9 +73,22 @@ class App extends Component {
 
       <div>
 
-        <Header clicks={this.state.clickCount} highScore={this.state.highScore} wins={this.state.wins} losses={this.state.losses} />
+        <Header 
+          clicks={this.state.clickCount} 
+          highScore={this.state.highScore} 
+          wins={this.state.wins} 
+          losses={this.state.losses} 
+        />
 
-        {this.state.DBZ.map(DBZ => <CharacterCards key={DBZ.id} name={DBZ.name} img={process.env.PUBLIC_URL + DBZ.image} handleDivClick={this.handleDivClick} id={DBZ.id} />)}
+        {this.state.dbz.map(dbz => (
+          <CharacterCards 
+            key={dbz.id} 
+            name={dbz.name} 
+            img={process.env.PUBLIC_URL + dbz.image} 
+            handleDivClick={this.handleDivClick} 
+            id={dbz.id} 
+          />
+        ))}
 
 
       </div>
