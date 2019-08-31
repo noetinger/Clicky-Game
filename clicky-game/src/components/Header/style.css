@@ -1,0 +1,9 @@
+/* Header Styles */
+#header{
+    font-size: 2rem;
+    
+}
+#header label{
+    display: inline-block;
+    margin-left:30px;
+}

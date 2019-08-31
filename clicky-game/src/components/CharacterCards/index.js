@@ -2,14 +2,9 @@ import React from "react";
 import "./style.css";
 
 const CharacterCards = props => (
-  <div 
-    className="card" 
-    value={props.id} 
-    onClick={() => props.handleClick(props.id)}
-  >
-    <div className="img-container">
-      <img alt={props.name} src={props.image} />
-    </div>
+  <div key={props.id} role="img" className="click-item" onClick={() => props.handleDivClick(props.id)} >
+        
+      <img alt={props.name} src={props.img} />
   </div>
 );
 
