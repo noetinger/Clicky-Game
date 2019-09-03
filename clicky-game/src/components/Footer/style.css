@@ -1,4 +1,11 @@
 /* Footer Styles */
+h5{
+ font-size: 15px;
+}
+
+h6{
+font-size: 10px;
+}
 
 #footer{
     text-align: center;

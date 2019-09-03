@@ -5,6 +5,7 @@ import CharacterCards from "./components/CharacterCards";
 import Footer from "./components/Footer";
 import dbz from "./dbz.json";
 
+//Shuffle Cards Array
 const shuffleArray = array => {
   for (let i = array.length - 1; i > 0; i--) {
 
@@ -19,21 +20,21 @@ const shuffleArray = array => {
 }
 
 class App extends Component {
-  //Set state
+  //States
   state = {
     dbz,
     clicks: [],
     clickCount: 0,
     highScore: 0,
   };
-
+  //Click event handler
   handleDivClick = (id) => {
     let clickArr = this.state.clicks
     let { highScore, clickCount } = this.state
     console.log(clickArr)
 
     if (clickArr.indexOf(id) > -1) {
-      this.setState({ clicks: [], clickCount: 0, losses: this.state.losses + 1 })
+      this.setState({ clicks: [], clickCount: 0})
       
     } else {
       clickCount++
@@ -45,20 +46,19 @@ class App extends Component {
       }
 
       if(clickCount % dbz.length === 0){
-        this.setState({clicks:[], wins: this.state.wins + 1 })
+        this.setState({clicks:[]})
       }
     }
     this.setState({ dbz: shuffleArray(dbz) })
 
   };
+  //Render to DOM
   render() {
     return (
       <div>
         <Header 
           clicks={this.state.clickCount} 
           highScore={this.state.highScore} 
-          wins={this.state.wins} 
-          losses={this.state.losses} 
         />
 
         <div className="container">
