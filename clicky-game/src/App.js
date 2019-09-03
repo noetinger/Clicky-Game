@@ -6,7 +6,7 @@ import Header from "./components/Header";
 // import Title from "./components/Title";
 // import Subtitle from "./components/Subtitle";
 import CharacterCards from "./components/CharacterCards";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import dbz from "./dbz.json";
 
 const shuffleArray = array => {
@@ -89,6 +89,8 @@ class App extends Component {
             id={dbz.id} 
           />
         ))}
+
+        <Footer />
 
 
       </div>
