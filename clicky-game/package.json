@@ -1,7 +1,9 @@
 {
   "name": "clicky-game",
   "version": "0.1.0",
+  "homepage" : "http://noetinger.github.io/clicky-game",
   "private": true,
+  
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
