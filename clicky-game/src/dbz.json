@@ -38,5 +38,10 @@
         "id":8,
         "name":"cell",
         "image":"/images/DBZ/cell.jpeg"
+    },
+    {
+        "id":9,
+        "name":"nappa",
+        "image":"/images/DBZ/nappa.jpeg"
     }
 ]
