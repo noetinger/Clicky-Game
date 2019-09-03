@@ -1,7 +1,7 @@
 {
   "name": "clicky-game",
   "version": "0.1.0",
-  "homepage" : "http://noetinger.github.io/clicky-game",
+  "homepage" : "https://noetinger.github.io/Clicky-Game/",
   "private": true,
   
   "dependencies": {
