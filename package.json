@@ -31,5 +31,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "#### Test your memory with your favorite characters from *Dragonball Z*.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noetinger/Clicky-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noetinger/Clicky-Game/issues"
   }
 }
